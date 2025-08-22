@@ -1,0 +1,16 @@
+<div class="exp" [formGroup]="mainFormGroup">
+            <h4>Experience</h4>
+            <ng-container formArrayName="experience">
+                <div *ngFor="let exp of experience.controls; let i = index" [formGroupName]="i">
+                    <div>
+                        <input formControlName='company' placeholder="company"/>&nbsp;&nbsp;
+                        <input formControlName='role' placeholder="role" />&nbsp;&nbsp;
+                        <input formControlName='year' placeholder="Years" />&nbsp;&nbsp;
+                        <button type="button" (click)="removeExp(i)"> RemoveExp</button>
+                    </div>
+                </div>  
+                <div>
+                    <button type="button" (click)="addExp()"> Add Exp</button>
+                </div>
+            </ng-container>
+        </div>

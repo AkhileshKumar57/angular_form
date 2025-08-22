@@ -1,0 +1,34 @@
+<div class="main">
+    <h3>Parent Component</h3>
+    <form [formGroup]="mainform" (ngSubmit)="onSubmit()">
+        <app-personal [personalForm]="personalFormControl"></app-personal>
+        <app-address [addressForm]="addressFormControl"></app-address>
+        <!-- form array in child component -->
+        <app-experience [mainFormGroup]="mainform"></app-experience>
+
+
+        <!--in form array in same or parent component  -->
+        <!-- <div class="exp">
+            <h4>Experience</h4>
+            <ng-container formArrayName="experience">
+                <div *ngFor="let exp of abcexp.controls; let i = index" [formGroupName]="i">
+                    <div>
+                        <input formControlName='company' placeholder="company"/>&nbsp;&nbsp;
+                        <input formControlName='role' placeholder="role" />&nbsp;&nbsp;
+                        <input formControlName='year' placeholder="Years" />&nbsp;&nbsp;
+                        <button type="button" (click)="removeExp(i)"> RemoveExp</button>
+                    </div>
+                </div>  
+                <div>
+                    <button type="button" (click)="addExp()"> Add Exp</button>
+                </div>
+            </ng-container>
+        </div> -->
+        <div>
+            <br>
+            <button type="submit">Submit</button>&nbsp;&nbsp;
+            <button type="button" (click)="Update()"> Patch</button>&nbsp;&nbsp;
+            <button type="button" (click)="clear()"> Clear</button>
+        </div>
+    </form> 
+</div>
