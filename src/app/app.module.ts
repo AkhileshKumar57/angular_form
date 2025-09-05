@@ -8,6 +8,9 @@ import { PersonalComponent } from './feature/personal/personal.component';
 import { AddressComponent } from './feature/address/address.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExperienceComponent } from './feature/experience/experience.component';
+import { HighlightColorDirective } from './core/directive/custom-directive';
+import { HomeComponent } from './home/home.component';
+import { camelCase } from './core/pipe/camel-case.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { ExperienceComponent } from './feature/experience/experience.component';
     ParentComponent,
     PersonalComponent,
     AddressComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    HighlightColorDirective,
+    HomeComponent,
+    camelCase
   ],
   imports: [
     BrowserModule,
